@@ -1,0 +1,7 @@
+# Mac OS X hidden files
+.DS_Store
+
+# Specific files
+steve-aim/Bukkit
+steve-aim/StartBukkit.command
+steve-aim/readme.txt

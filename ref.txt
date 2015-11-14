@@ -1,0 +1,11 @@
+# ~/.bash_profile
+alias steve='cd ~/Documents/steve'
+alias tw='open -a /Applications/TextWrangler.app'
+
+# GitHub API
+https://developer.github.com/v3/
+
+# Create a new remote repo from CLI
+
+# curl
+https://quickleft.com/blog/command-line-tutorials-curl/
