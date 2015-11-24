@@ -10,10 +10,8 @@ def sigma(start, end, diff):
 
 '''
 def main():
-    '''
     for n in range(101):
         print "sum of first " + str(n) + ": " + str(sigma(1, n, 1))
-    '''
     print sigma(1, 100, 1)
 '''
 
