@@ -20,5 +20,8 @@ print n
 print seg
 print bseg
 
+si = 0
+bi = 0
 for d in range(100):
+    
     pass
