@@ -1,11 +1,47 @@
+=============
+BASH TERMINAL
+=============
 # ~/.bash_profile
-alias steve='cd ~/Documents/steve'
+alias steve='cd ~/Documents/steve’; echo ‘Greetings, o great Stephen!’
 alias tw='open -a /Applications/TextWrangler.app'
+
+# chain multiple commands
+A; B    Run A and then B, regardless of success of A
+A && B  Run B if A succeeded
+A || B  Run B if A failed
+A &     Run A in background
+
+# curl
+https://quickleft.com/blog/command-line-tutorials-curl/
+
+==MAC SPECIFIC==
+# open a folder in Finder
+open .
+open Documents
+open -R .
+
+=============
+GITHUB BASICS
+=============
+git init
+git status
+git add .
+git commit -m “message”
+
+# git push <REMOTENAME> <BRANCHNAME>
+git push origin master
+
+git log
+
+# Clone repo to current directory
+git clone https://github.com/USERNAME/REPO
+
+=============
+GITHUB EXTRAS
+=============
+git config [—global] <user.name, user.email>
 
 # GitHub API
 https://developer.github.com/v3/
 
 # Create a new remote repo from CLI
-
-# curl
-https://quickleft.com/blog/command-line-tutorials-curl/
