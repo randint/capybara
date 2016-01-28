@@ -2,7 +2,7 @@
 .DS_Store
 
 # PyCharm and IntelliJ IDEA metadata
-**/.idea/
+**/.idea
 
 # Specific files
 steve-aim/Bukkit
