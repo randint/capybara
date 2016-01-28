@@ -1,7 +1,7 @@
 def fact(n):
     return 1 if(n <= 1) else n * fact(n - 1)
 
-def combinations(n,k):
+def combinations(n, k):
     return fact(n) / ((fact(n - k) * fact(k)))
 
 def fact_iter(n):
