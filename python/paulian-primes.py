@@ -42,4 +42,4 @@ def expand_paulian(p, limit):
         else:
             return expand_paulian(p + "3", limit)
 
-expand_paulian("5", 10000)
+expand_paulian("7", 996)
