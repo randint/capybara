@@ -21,7 +21,7 @@ def is_paulian(p):
         for end_index in range(start_index + 1, len(p) + 1):
             if not is_prime(int(p[start_index : end_index])):
                 return False
-    return True     
+    return True
 
 # start_time = time.time()
 # start_range = 1

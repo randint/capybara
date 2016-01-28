@@ -1,8 +1,8 @@
 # Mac OS X hidden files
 .DS_Store
 
-# PyCharm and IntelliJ IDEA metadata
-**/.idea
+# Windows
+/.idea
 
 # Specific files
 steve-aim/Bukkit
