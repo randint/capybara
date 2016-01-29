@@ -2,7 +2,7 @@
 .DS_Store
 
 # PyCharm and IntelliJ IDEA
-/.idea
+**/.idea
 
 # Specific files
 steve-aim/Bukkit
