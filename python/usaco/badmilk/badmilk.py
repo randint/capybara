@@ -5,6 +5,8 @@ M: milks, 1-50
 T: time, 1-100
 '''
 
+# incorrect for 9.in, returns 16 (correct: 15)
+
 f = open("badmilk.in", 'r')
 line = f.readline().split()
 N, M, D, S = int(line[0]), int(line[1]), int(line[2]), int(line[3])

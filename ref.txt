@@ -41,6 +41,12 @@ GITHUB EXTRAS
 =============
 git config [—global] <user.name, user.email>
 
+git commit --amend
+git commit --amend --author="Author Name <email@address.com>"
+
+git rm
+git rm -r --cached
+
 # GitHub API
 https://developer.github.com/v3/
 
