@@ -1,5 +1,6 @@
 import math
 
+plist = []
 
 def is_prime(n):
     if n < 100:
@@ -16,13 +17,13 @@ def is_prime(n):
 # [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97]
 def generate_primes(limit):
     primes = []
-    for i in range(2, plimit + 1):
+    for i in range(2, limit + 1):
         if is_prime(i):
             primes.append(i)
     return primes
 
 
-def check_range_of_primes(start_range, end_range + 1):    
+def check_range_of_primes(start_range, end_range):
     for i in range(start_range, end_range + 1):
         pass
 
