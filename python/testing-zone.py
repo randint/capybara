@@ -36,7 +36,9 @@ print(summation3([1]))
 print(summation3([1, 2, 3]))
 '''
 
+# Comment not shown in documentation
 def lcm(num1, *nums):
+    """Returns the least common multiple of one or more integers"""
     lcm = num1
     for num in nums:
         if num % lcm != 0:
