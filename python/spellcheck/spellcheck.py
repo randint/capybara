@@ -1,11 +1,12 @@
 def spellcheck(word):
     if word in words:
         return
-    suggestions = []
+    suggestions = set()
+
     for a in range(len(word) - 1):
         for b in range(a + 1, len(word)):
             if word[a:b] in words:
-                suggestions.append(word[a:b])
+                suggestions.add(word[a:b])
     return suggestions
 
 wordfile = "wordsEn.txt"

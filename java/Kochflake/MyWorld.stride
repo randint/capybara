@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="MyWorld" extends="World" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+        <import target="java.awt.Color" enable="true"/>
+        <import target="java.awt.Point" enable="true"/>
+    </imports>
+    <implements/>
+    <fields>
+        <variable access="private" type="int" name="w" enable="true"/>
+        <variable access="private" type="int" name="h" enable="true"/>
+        <variable access="private" type="int" name="iter" enable="true"/>
+        <variable access="private" type="ArrayList&lt;Point&gt;" name="p" value="new ArrayList()" value-java=" new ArrayList()" enable="true"/>
+        <variable access="private" type="GreenfootImage" name="canvas" enable="true"/>
+    </fields>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <delegate target="super" params="601,601,1" params-java="601, 601, 1"/>
+            <body>
+                <assign dest="canvas" dest-java="canvas" src="new GreenfootImage(getWidth(),getHeight())" src-java=" new GreenfootImage(getWidth(), getHeight())" enable="true"/>
+                <call expression="canvas.setColor(Color.MAGENTA)" expression-java="canvas.setColor(Color.MAGENTA)" enable="true"/>
+                <assign dest="w" dest-java="w" src="getWidth()-1" src-java="getWidth() - 1" enable="true"/>
+                <assign dest="h" dest-java="h" src="getHeight()-1" src-java="getHeight() - 1" enable="true"/>
+                <call expression="p.add(new Point(0,h/4))" expression-java="p.add( new Point(0, h / 4))" enable="true"/>
+                <call expression="p.add(new Point(w,h/4))" expression-java="p.add( new Point(w, h / 4))" enable="true"/>
+                <call expression="p.add(new Point(w/2,h))" expression-java="p.add( new Point(w / 2, h))" enable="true"/>
+                <call expression="setBackground(canvas)" expression-java="setBackground(canvas)" enable="true"/>
+                <call expression="draw()" expression-java="draw()" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="public" type="void" name="draw" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="int" name="i" value="0" value-java="0" enable="true"/>
+                <while condition="i&lt;p.size()-2" condition-java="i &lt; p.size() - 2" enable="true">
+                    <variable type="int" name="x1" value="(int)p.get(i).getX()" value-java="(int)p.get(i).getX()" enable="true"/>
+                    <variable type="int" name="y1" value="(int)p.get(i).getY()" value-java="(int)p.get(i).getY()" enable="true"/>
+                    <variable type="int" name="x2" value="(int)p.get((i+1)%p.size()).getX()" value-java="(int)p.get((i + 1) % p.size()).getX()" enable="true"/>
+                    <variable type="int" name="y2" value="(int)p.get((i+1)%p.size()).getY()" value-java="(int)p.get((i + 1) % p.size()).getY()" enable="true"/>
+                    <variable type="int" name="x3" value="(int)p.get((i+2)%p.size()).getX()" value-java="(int)p.get((i + 2) % p.size()).getX()" enable="true"/>
+                    <variable type="int" name="y3" value="(int)p.get((i+2)%p.size()).getY()" value-java="(int)p.get((i + 2) % p.size()).getY()" enable="true"/>
+                    <call expression="canvas.drawLine(x1,y1,x2,y2)" expression-java="canvas.drawLine(x1, y1, x2, y2)" enable="true"/>
+                    <call expression="canvas.drawLine(x2,y2,x3,y3)" expression-java="canvas.drawLine(x2, y2, x3, y3)" enable="true"/>
+                    <call expression="canvas.drawLine(x3,y3,x1,y1)" expression-java="canvas.drawLine(x3, y3, x1, y1)" enable="true"/>
+                    <assign dest="i" dest-java="i" src="i+3" src-java="i + 3" enable="true"/>
+                </while>
+            </body>
+        </method>
+        <method access="public" type="void" name="koch" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="ArrayList&lt;Point&gt;" name="newP" value="new ArrayList()" value-java=" new ArrayList()" enable="true"/>
+                <variable type="int" name="i" value="0" value-java="0" enable="true"/>
+                <while condition="i&lt;p.size()" condition-java="i &lt; p.size()" enable="true">
+                    <variable type="int" name="x1" value="(int)p.get(i).getX()" value-java="(int)p.get(i).getX()" enable="true"/>
+                    <variable type="int" name="y1" value="(int)p.get(i).getY()" value-java="(int)p.get(i).getY()" enable="true"/>
+                    <variable type="int" name="x2" value="(int)p.get((i+1)%p.size()).getX()" value-java="(int)p.get((i + 1) % p.size()).getX()" enable="true"/>
+                    <variable type="int" name="y2" value="(int)p.get((i+1)%p.size()).getY()" value-java="(int)p.get((i + 1) % p.size()).getY()" enable="true"/>
+                    <call expression="newP.add(new Point())" expression-java="newP.add( new Point())" enable="true"/>
+                    <call expression="canvas.drawLine(x1,y1,x2,y2)" expression-java="canvas.drawLine(x1, y1, x2, y2)" enable="true"/>
+                    <assign dest="i" dest-java="i" src="i+1" src-java="i + 1" enable="true"/>
+                </while>
+            </body>
+        </method>
+    </methods>
+</class>
